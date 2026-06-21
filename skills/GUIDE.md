@@ -1,6 +1,6 @@
 # Skills 指南
 
-本仓库包含 17 个 Skill，涵盖文档处理、创意设计、API 开发、内容协作和技能开发等领域。每个 Skill 是自包含的文件夹，包含 `SKILL.md` 指令文件以及配套的脚本和资源。
+本仓库包含 18 个 Skill，涵盖文档处理、创意设计、API 开发、内容协作和技能开发等领域。每个 Skill 是自包含的文件夹，包含 `SKILL.md` 指令文件以及配套的脚本和资源。
 
 ---
 
@@ -10,7 +10,7 @@
 |------|--------|------|
 | 文档处理 | docx, pptx, xlsx, pdf | 创建、编辑、操作 Office 文档和 PDF |
 | 创意与设计 | algorithmic-art, canvas-design, frontend-design, theme-factory, slack-gif-creator, brand-guidelines | 视觉设计、生成艺术、主题风格 |
-| 开发与 API | claude-api, mcp-builder, web-artifacts-builder, webapp-testing | Claude API 开发、MCP 服务构建、Web 测试 |
+| 开发与 API | claude-api, mcp-builder, web-artifacts-builder, webapp-testing, karpathy-guidelines | Claude API 开发、MCP 服务构建、Web 测试、编码规范 |
 | 内容与协作 | doc-coauthoring, internal-comms | 文档协作文档、内部通讯撰写 |
 | 技能开发工具 | skill-creator | 创建、优化和评测 Skill |
 
@@ -109,6 +109,12 @@
 - **许可**: Apache 2.0
 - **关键文件**: `scripts/with_server.py`、`examples/`（控制台日志、元素发现、静态 HTML 自动化示例）
 
+### [karpathy-guidelines](./karpathy-guidelines)
+- **描述**: 减少常见 LLM 编码错误的行动指南，源自 Andrej Karpathy 的观察
+- **功能**: 编码前思考、简洁优先、手术式修改、目标驱动执行
+- **许可**: MIT
+- **原则**: 先思考再编码、最少代码解决问题、只改动必要部分、定义可验证的成功标准
+
 ---
 
 ## 四、内容与协作
@@ -142,6 +148,7 @@
 | 技能 | 许可 |
 |------|------|
 | docx, pptx, xlsx, pdf | **Source-available**（源可用，非开源） |
+| karpathy-guidelines | **MIT** |
 | 其余所有技能 | **Apache 2.0** |
 
 ## 快速导航
@@ -149,6 +156,7 @@
 - **想创建技能？** → [skill-creator](./skill-creator)
 - **想用文档格式？** → 对应格式技能 + [theme-factory](./theme-factory) 美化
 - **想开发 Claude 应用？** → [claude-api](./claude-api) + [mcp-builder](./mcp-builder)
+- **想遵循编码最佳实践？** → [karpathy-guidelines](./karpathy-guidelines)
 - **想设计 UI？** → [frontend-design](./frontend-design) + [brand-guidelines](./brand-guidelines) + [theme-factory](./theme-factory)
 - **想测试 Web 应用？** → [webapp-testing](./webapp-testing)
 - **想写文档/通讯？** → [doc-coauthoring](./doc-coauthoring) + [internal-comms](./internal-comms)
