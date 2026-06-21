@@ -1,6 +1,6 @@
 # Skills 指南
 
-本仓库包含 18 个 Skill，涵盖文档处理、创意设计、API 开发、内容协作和技能开发等领域。每个 Skill 是自包含的文件夹，包含 `SKILL.md` 指令文件以及配套的脚本和资源。
+本仓库包含 19 个 Skill，涵盖文档处理、创意设计、API 开发、内容协作、技能教学和技能开发等领域。每个 Skill 是自包含的文件夹，包含 `SKILL.md` 指令文件以及配套的脚本和资源。
 
 ---
 
@@ -11,7 +11,8 @@
 | 文档处理 | docx, pptx, xlsx, pdf | 创建、编辑、操作 Office 文档和 PDF |
 | 创意与设计 | algorithmic-art, canvas-design, frontend-design, theme-factory, slack-gif-creator, brand-guidelines | 视觉设计、生成艺术、主题风格 |
 | 开发与 API | claude-api, mcp-builder, web-artifacts-builder, webapp-testing, karpathy-guidelines | Claude API 开发、MCP 服务构建、Web 测试、编码规范 |
-| 内容与协作 | doc-coauthoring, internal-comms | 文档协作文档、内部通讯撰写 |
+| 内容与协作 | doc-coauthoring, internal-comms, teach | 文档协作、内部通讯、技能教学 |
+| 学习与效率 | feynman-technique | 费曼学习法、概念理解 |
 | 技能开发工具 | skill-creator | 创建、优化和评测 Skill |
 
 ---
@@ -131,6 +132,12 @@
 - **许可**: Apache 2.0
 - **关键文件**: `examples/`（各类型通讯模板）
 
+### [teach](./teach)
+- **描述**: 在当前工作区内多会话教学新技能或新概念
+- **功能**: 使命驱动教学、课程生成（HTML）、学习记录追踪、术语表管理、资源管理
+- **许可**: Apache 2.0
+- **关键文件**: `MISSION-FORMAT.md`、`LEARNING-RECORD-FORMAT.md`、`GLOSSARY-FORMAT.md`、`RESOURCES-FORMAT.md`
+
 ---
 
 ## 五、技能开发工具
@@ -143,12 +150,23 @@
 
 ---
 
+## 六、学习与效率
+
+### [feynman-technique](./feynman-technique)
+- **描述**: 使用费曼学习法（Feynman Learning Technique）帮助用户深入理解任意概念
+- **功能**: 以教代学、简化复杂概念、识别知识盲区、建立直觉理解
+- **适用场景**: 技术概念解释、知识梳理、复杂主题入门
+- **许可**: Apache 2.0
+
+---
+
 ## 许可说明
 
 | 技能 | 许可 |
 |------|------|
 | docx, pptx, xlsx, pdf | **Source-available**（源可用，非开源） |
 | karpathy-guidelines | **MIT** |
+| feynman-technique | **Apache 2.0** |
 | 其余所有技能 | **Apache 2.0** |
 
 ## 快速导航
@@ -160,4 +178,6 @@
 - **想设计 UI？** → [frontend-design](./frontend-design) + [brand-guidelines](./brand-guidelines) + [theme-factory](./theme-factory)
 - **想测试 Web 应用？** → [webapp-testing](./webapp-testing)
 - **想写文档/通讯？** → [doc-coauthoring](./doc-coauthoring) + [internal-comms](./internal-comms)
+- **想多会话学习新技能？** → [teach](./teach)
+- **想深入理解概念？** → [feynman-technique](./feynman-technique)
 - **想生成艺术/GIF？** → [algorithmic-art](./algorithmic-art) + [canvas-design](./canvas-design) + [slack-gif-creator](./slack-gif-creator)

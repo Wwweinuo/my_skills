@@ -51,6 +51,16 @@
       "skills": [
         "./skills/claude-api"
       ]
+    },
+    {
+      "name": "productivity-skills",
+      "description": "Productivity and learning skills including multi-session teaching",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/teach",
+        "./skills/feynman-technique"
+      ]
     }
   ]
 }
