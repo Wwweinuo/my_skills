@@ -1,6 +1,10 @@
 # My Skills
 
-该项目是 Claude Code Skills 插件仓库，通过 `.claude-plugin/marketplace.json` 注册多个插件（plugins），每个插件下包含若干技能（skills）。
+这是我的 Claude Code 个人技能集合，基于 Anthropic Skills 插件体系扩展。
+
+包含 20 个技能，涵盖文档处理、创意设计、API 开发、内容协作、学习教学和技能开发。本项目特别强化了中文用户的使用体验，并加入了自定义学习类技能（如费曼学习法、多会话教学等）。
+
+通过 `.claude-plugin/marketplace.json` 注册多个插件（plugins），每个插件下包含若干技能（skills）。
 
 ## 项目结构
 
