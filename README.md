@@ -1,59 +1,66 @@
 # My Skills
 
-这是我的 Claude Code 个人技能集合，基于 [Anthropic Skills](https://github.com/anthropics/skills) 插件体系扩展。
+这是 Wwweinuo 用来集中管理、验证和分发个人 Agent Skills 的 Git 仓库。每个 Skill 都是一个自包含目录，以 `SKILL.md` 作为入口，可附带脚本、参考资料和资源。
 
-涵盖 **20 个技能**，包括文档处理、创意设计、API 开发、内容协作、学习教学和技能开发等领域。本项目特别强化了中文用户的使用体验，并加入了自定义学习类技能（如费曼学习法、多会话教学等）。
+仓库同时保留部分第三方示例 Skill 作为参考。它们各自的许可证优先于仓库根许可证；发布或再分发前请阅读 [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md)。
 
-每个 Skill 是自包含的文件夹，包含 `SKILL.md` 指令文件以及配套的脚本和资源。
+## 使用
 
-## 技能列表
+在 Claude Code 中添加 GitHub Marketplace：
 
-| 类别 | 技能 | 说明 |
-|------|------|------|
-| 文档处理 | docx, pptx, xlsx, pdf | 创建、编辑、操作 Office 文档和 PDF |
-| 创意与设计 | algorithmic-art, canvas-design, frontend-design, theme-factory, slack-gif-creator, brand-guidelines | 视觉设计、生成艺术、主题风格 |
-| 开发与 API | claude-api, mcp-builder, web-artifacts-builder, webapp-testing, karpathy-guidelines | Claude API 开发、MCP 服务构建、Web 测试、编码规范 |
-| 内容与协作 | doc-coauthoring, internal-comms, teach | 文档协作、内部通讯、技能教学 |
-| 学习与效率 | feynman-technique | 费曼学习法、概念理解 |
-| 技能开发 | skill-creator | 创建、优化和评测 Skill |
-
-## 项目结构
-
-```
-├── .claude-plugin/marketplace.json   # 插件市场注册配置
-├── skills/                            # 所有技能目录
-│   ├── GUIDE.md                       # 技能分类指南
-│   ├── <skill-name>/                  # 每个技能自包含文件夹
-│   │   ├── SKILL.md                   # 技能定义（含 YAML frontmatter）
-│   │   └── scripts/                   # 辅助脚本
-│   └── ...
-├── template/SKILL.md                  # 新技能模板
-└── spec/                              # Agent Skills 规范
-```
-
-## 使用方式
-
-在 Claude Code 中注册此仓库作为插件市场：
-
-```
+```text
 /plugin marketplace add Wwweinuo/my_skills
+/plugin install personal-skills@wwweinuo-skills
 ```
 
-或直接安装插件：
+本地开发时也可以直接添加仓库目录：
 
+```text
+/plugin marketplace add D:/code/my_skills
+/plugin install personal-skills@wwweinuo-skills
 ```
-/plugin install productivity-skills@anthropic-agent-skills
+
+更新远端内容后，刷新 Marketplace：
+
+```text
+/plugin marketplace update wwweinuo-skills
 ```
 
-## 自定义技能亮点
+## 仓库结构
 
-- **[feynman-technique](./skills/feynman-technique)** — 费曼学习法，用最简单的语言解释复杂概念
-- **[teach](./skills/teach)** — 多会话教学，在工作区内系统化学习新技能
-- **[karpathy-guidelines](./skills/karpathy-guidelines)** — Karpathy 编码原则，减少常见 LLM 编码错误
+```text
+├── .claude-plugin/marketplace.json  # Claude Code Marketplace
+├── .github/workflows/validate.yml   # GitHub 自动校验
+├── scripts/                         # 仓库维护工具
+├── skills/
+│   ├── catalog.json                 # 技能清单的唯一结构化数据源
+│   ├── GUIDE.md                     # 面向读者的分类指南
+│   └── <skill-name>/SKILL.md        # Skill 入口
+├── template/SKILL.md                # 新 Skill 模板
+├── LICENSE                          # 仓库原创内容许可证
+└── THIRD_PARTY_NOTICES.md           # 第三方来源和发布限制
+```
 
-## 许可
+完整技能列表及分类见 [Skills 指南](./skills/GUIDE.md)，机器可读信息见 [`skills/catalog.json`](./skills/catalog.json)。
 
-- docx, pptx, xlsx, pdf — **Source-available**（源可用）
-- karpathy-guidelines — **MIT**
-- feynman-technique — **Apache 2.0**
-- 其余所有技能 — **Apache 2.0**
+## 新增 Skill
+
+```powershell
+python scripts/new_skill.py my-skill `
+  --description "说明它做什么，以及什么时候应当使用" `
+  --category "开发与 API" `
+  --summary "一句话简介" `
+  --origin personal
+```
+
+然后完善生成的 `skills/my-skill/SKILL.md`，在 `skills/GUIDE.md` 对应分类中加入说明，并执行：
+
+```powershell
+python -m pip install -r requirements-dev.txt
+python scripts/validate_repo.py
+claude plugin validate .
+```
+
+## 许可证
+
+仓库原创内容默认采用 [Apache License 2.0](./LICENSE)。Skill 目录内存在 `LICENSE.txt` 时，以该文件为准。特别注意：`docx`、`pptx`、`xlsx`、`pdf` 的现有条款不是开源许可证，并包含严格的复制和分发限制；`doc-coauthoring` 当前没有许可证文件，必须先核实授权再公开分发。

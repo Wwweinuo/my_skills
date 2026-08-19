@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "skills": [
+    {"name": "algorithmic-art", "category": "创意与设计", "summary": "使用 p5.js 创建算法生成艺术", "origin": "anthropics/skills", "license": "Apache-2.0", "redistributable": true},
+    {"name": "brand-guidelines", "category": "创意与设计", "summary": "应用 Anthropic 品牌视觉规范", "origin": "anthropics/skills", "license": "Apache-2.0", "redistributable": true},
+    {"name": "canvas-design", "category": "创意与设计", "summary": "创建 PNG 和 PDF 视觉设计", "origin": "anthropics/skills", "license": "Apache-2.0", "redistributable": true},
+    {"name": "claude-api", "category": "开发与 API", "summary": "Claude API 和 SDK 开发参考", "origin": "anthropics/skills", "license": "Apache-2.0", "redistributable": true},
+    {"name": "doc-coauthoring", "category": "内容与协作", "summary": "结构化完成文档合著", "origin": "anthropics/skills", "license": "Unverified", "redistributable": false},
+    {"name": "docx", "category": "文档处理", "summary": "创建、读取和编辑 Word 文档", "origin": "anthropics/skills", "license": "Anthropic-source-available", "redistributable": false},
+    {"name": "feynman-technique", "category": "学习与效率", "summary": "使用费曼学习法理解复杂概念", "origin": "local", "license": "Apache-2.0-root", "redistributable": true},
+    {"name": "frontend-design", "category": "创意与设计", "summary": "构建具有明确视觉方向的前端界面", "origin": "anthropics/skills", "license": "Apache-2.0", "redistributable": true},
+    {"name": "humanizer", "category": "内容与协作", "summary": "在不改变事实的前提下消除文本中的 AI 写作痕迹", "origin": "blader/humanizer", "license": "MIT", "redistributable": true, "version": "2.11.2", "sourceCommit": "e2e92e7b4b8229253ed5c8e81dc65463fdeddda5"},
+    {"name": "internal-comms", "category": "内容与协作", "summary": "编写内部通讯和项目更新", "origin": "anthropics/skills", "license": "Apache-2.0", "redistributable": true},
+    {"name": "karpathy-guidelines", "category": "开发与 API", "summary": "减少常见 LLM 编码错误", "origin": "local", "license": "MIT", "redistributable": true},
+    {"name": "mcp-builder", "category": "开发与 API", "summary": "设计和实现 MCP 服务器", "origin": "anthropics/skills", "license": "Apache-2.0", "redistributable": true},
+    {"name": "pdf", "category": "文档处理", "summary": "读取、创建和操作 PDF", "origin": "anthropics/skills", "license": "Anthropic-source-available", "redistributable": false},
+    {"name": "pptx", "category": "文档处理", "summary": "创建和编辑 PowerPoint 演示文稿", "origin": "anthropics/skills", "license": "Anthropic-source-available", "redistributable": false},
+    {"name": "skill-creator", "category": "技能开发工具", "summary": "创建、优化和评测 Skill", "origin": "anthropics/skills", "license": "Apache-2.0", "redistributable": true},
+    {"name": "slack-gif-creator", "category": "创意与设计", "summary": "创建适用于 Slack 的动画 GIF", "origin": "anthropics/skills", "license": "Apache-2.0", "redistributable": true},
+    {"name": "teach", "category": "内容与协作", "summary": "在工作区内开展多会话教学", "origin": "local", "license": "Apache-2.0-root", "redistributable": true},
+    {"name": "theme-factory", "category": "创意与设计", "summary": "为文档和页面应用主题风格", "origin": "anthropics/skills", "license": "Apache-2.0", "redistributable": true},
+    {"name": "web-artifacts-builder", "category": "开发与 API", "summary": "构建复杂的交互式 Web 制品", "origin": "anthropics/skills", "license": "Apache-2.0", "redistributable": true},
+    {"name": "webapp-testing", "category": "开发与 API", "summary": "使用 Playwright 测试本地 Web 应用", "origin": "anthropics/skills", "license": "Apache-2.0", "redistributable": true},
+    {"name": "xlsx", "category": "文档处理", "summary": "创建、编辑和修复电子表格", "origin": "anthropics/skills", "license": "Anthropic-source-available", "redistributable": false}
+  ]
+}
