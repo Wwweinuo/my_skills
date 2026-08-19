@@ -1,65 +1,38 @@
 {
-  "name": "anthropic-agent-skills",
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "wwweinuo-skills",
   "owner": {
-    "name": "Keith Lazuka",
-    "email": "klazuka@anthropic.com"
+    "name": "Wwweinuo"
   },
-  "metadata": {
-    "description": "Anthropic example skills",
-    "version": "1.0.0"
-  },
+  "description": "Wwweinuo's personal Agent Skills collection",
   "plugins": [
     {
-      "name": "document-skills",
-      "description": "Collection of document processing suite including Excel, Word, PowerPoint, and PDF capabilities",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/xlsx",
-        "./skills/docx",
-        "./skills/pptx",
-        "./skills/pdf"
-      ]
-    },
-    {
-      "name": "example-skills",
-      "description": "Collection of example skills demonstrating various capabilities including skill creation, MCP building, visual design, algorithmic art, internal communications, web testing, artifact building, Slack GIFs, and theme styling",
+      "name": "personal-skills",
+      "description": "Personal collection of document, design, development, communication, and learning skills",
       "source": "./",
       "strict": false,
       "skills": [
         "./skills/algorithmic-art",
         "./skills/brand-guidelines",
         "./skills/canvas-design",
+        "./skills/claude-api",
         "./skills/doc-coauthoring",
+        "./skills/docx",
+        "./skills/feynman-technique",
         "./skills/frontend-design",
+        "./skills/humanizer",
         "./skills/internal-comms",
+        "./skills/karpathy-guidelines",
         "./skills/mcp-builder",
+        "./skills/pdf",
+        "./skills/pptx",
         "./skills/skill-creator",
         "./skills/slack-gif-creator",
+        "./skills/teach",
         "./skills/theme-factory",
         "./skills/web-artifacts-builder",
         "./skills/webapp-testing",
-        "./skills/karpathy-guidelines"
-      ]
-    }
-    ,
-    {
-      "name": "claude-api",
-      "description": "Claude API and SDK documentation skill for building LLM-powered applications",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/claude-api"
-      ]
-    },
-    {
-      "name": "productivity-skills",
-      "description": "Productivity and learning skills including multi-session teaching",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/teach",
-        "./skills/feynman-technique"
+        "./skills/xlsx"
       ]
     }
   ]

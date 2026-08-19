@@ -1,6 +1,6 @@
 # Skills 指南
 
-这是我的 Claude Code 技能集合，基于 Anthropic 官方技能扩展，添加了适合中文用户的学习与开发技能。涵盖文档处理、创意设计、API 开发、内容协作、技能教学和技能开发等领域。每个 Skill 是自包含的文件夹，包含 `SKILL.md` 指令文件以及配套的脚本和资源。
+这是 Wwweinuo 的 Agent Skills 集合，基于 Anthropic 示例技能扩展，并添加了适合中文用户的学习与开发技能。每个 Skill 是自包含的文件夹，包含 `SKILL.md` 指令文件以及配套的脚本和资源。机器可读的技能名称、分类、来源和许可证以 [`catalog.json`](./catalog.json) 为准。
 
 ---
 
@@ -11,7 +11,7 @@
 | 文档处理 | docx, pptx, xlsx, pdf | 创建、编辑、操作 Office 文档和 PDF |
 | 创意与设计 | algorithmic-art, canvas-design, frontend-design, theme-factory, slack-gif-creator, brand-guidelines | 视觉设计、生成艺术、主题风格 |
 | 开发与 API | claude-api, mcp-builder, web-artifacts-builder, webapp-testing, karpathy-guidelines | Claude API 开发、MCP 服务构建、Web 测试、编码规范 |
-| 内容与协作 | doc-coauthoring, internal-comms, teach | 文档协作、内部通讯、技能教学 |
+| 内容与协作 | doc-coauthoring, humanizer, internal-comms, teach | 文档协作、自然化改写、内部通讯、技能教学 |
 | 学习与效率 | feynman-technique | 费曼学习法、概念理解 |
 | 技能开发工具 | skill-creator | 创建、优化和评测 Skill |
 
@@ -126,6 +126,13 @@
 - **阶段**: 上下文收集 → 细化与结构化 → 读者测试 → 终审
 - **许可**: Apache 2.0
 
+### [humanizer](./humanizer)
+- **描述**: 在不改变原意和事实的前提下，把带有明显 AI 痕迹的文本改得自然
+- **功能**: 识别宣传腔、空泛归因、机械结构、套话和聊天机器人痕迹；支持匹配用户写作样本
+- **来源**: [blader/humanizer](https://github.com/blader/humanizer)，版本 2.11.2
+- **许可**: MIT
+- **关键文件**: `SKILL.md`、`agents/openai.yaml`
+
 ### [internal-comms](./internal-comms)
 - **描述**: 编写各类内部通讯
 - **功能**: 状态报告、领导层更新、第三方更新、公司简报、FAQ、事故报告、项目更新
@@ -162,12 +169,18 @@
 
 ## 许可说明
 
+Skill 目录内存在 `LICENSE.txt` 时，以该文件为准；否则适用仓库根目录的 Apache License 2.0。完整来源和再分发说明见 [`THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md)。
+
 | 技能 | 许可 |
 |------|------|
 | docx, pptx, xlsx, pdf | **Source-available**（源可用，非开源） |
 | karpathy-guidelines | **MIT** |
 | feynman-technique | **Apache 2.0** |
+| doc-coauthoring | **待核实**（当前目录无许可证文件） |
+| humanizer | **MIT** |
 | 其余所有技能 | **Apache 2.0** |
+
+> **发布提醒**：`docx`、`pptx`、`xlsx`、`pdf` 的许可证包含复制和分发限制，`doc-coauthoring` 的许可证来源尚未核实。公开推送、镜像或分发仓库前，请先确认授权，或从公开版本中移除这些目录。
 
 ## 快速导航
 
@@ -178,6 +191,7 @@
 - **想设计 UI？** → [frontend-design](./frontend-design) + [brand-guidelines](./brand-guidelines) + [theme-factory](./theme-factory)
 - **想测试 Web 应用？** → [webapp-testing](./webapp-testing)
 - **想写文档/通讯？** → [doc-coauthoring](./doc-coauthoring) + [internal-comms](./internal-comms)
+- **想让文本更自然？** → [humanizer](./humanizer)
 - **想多会话学习新技能？** → [teach](./teach)
 - **想深入理解概念？** → [feynman-technique](./feynman-technique)
 - **想生成艺术/GIF？** → [algorithmic-art](./algorithmic-art) + [canvas-design](./canvas-design) + [slack-gif-creator](./slack-gif-creator)

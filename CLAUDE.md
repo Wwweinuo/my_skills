@@ -1,45 +1,23 @@
-# My Skills
+# My Skills 仓库维护说明
 
-这是我的 Claude Code 个人技能集合，基于 Anthropic Skills 插件体系扩展。
+这是 Wwweinuo 的个人 Agent Skills 仓库。`skills/` 是技能内容的唯一源目录，`.claude-plugin/marketplace.json` 负责 Claude Code 分发。
 
-包含 20 个技能，涵盖文档处理、创意设计、API 开发、内容协作、学习教学和技能开发。本项目特别强化了中文用户的使用体验，并加入了自定义学习类技能（如费曼学习法、多会话教学等）。
+## 维护约束
 
-通过 `.claude-plugin/marketplace.json` 注册多个插件（plugins），每个插件下包含若干技能（skills）。
+- 不要覆盖用户尚未提交的修改。
+- 每个 `skills/<name>/` 目录必须包含 `SKILL.md`。
+- `SKILL.md` frontmatter 至少包含 `name` 和 `description`；目录名必须与 `name` 相同。
+- `description` 需同时说明 Skill 的能力及适用时机。
+- 详细的条件化说明放入 `references/`，可重复执行的确定性操作放入 `scripts/`，生成物素材放入 `assets/`。
+- `skills/catalog.json` 是技能名称、分类、来源和许可证的唯一结构化数据源。
+- 新增、删除或重命名 Skill 时，同步更新 `skills/catalog.json`、`skills/GUIDE.md` 和 Marketplace 的 `skills` 数组。
+- Skill 目录内的许可证优先于仓库根许可证。不得把 source-available 内容描述成开源内容。
+- 提交前运行 `python scripts/validate_repo.py`；安装 Claude Code 的环境还应运行 `claude plugin validate .`。
 
-## 项目结构
+## 新建 Skill
 
-```
-├── .claude-plugin/marketplace.json   # 插件市场注册配置
-├── skills/                            # 所有技能目录
-│   ├── GUIDE.md                       # 技能分类指南（新增技能后需同步更新）
-│   ├── <skill-name>/                  # 每个技能自包含文件夹
-│   │   ├── SKILL.md                   # 技能定义（含 YAML frontmatter: name, description, trigger）
-│   │   ├── scripts/                   # 辅助脚本
-│   │   └── ...
-│   └── ...
-├── template/SKILL.md                  # 新技能模板
-└── spec/                              # Agent Skills 规范
-```
+优先使用 `scripts/new_skill.py` 创建目录和 Catalog 条目，再根据实际工作流完善内容。不要创建没有用途的空目录或示例文件。
 
-## 关键规则
+## 第三方内容
 
-### 新增技能时必须更新 GUIDE.md
-
-每次添加新技能（即在 `skills/` 下新建文件夹并编写 `SKILL.md` 后），必须同步更新 `skills/GUIDE.md`：
-
-1. 在对应分类下添加新技能条目（或创建新分类）
-2. 参考已有条目的格式，包含：描述、核心功能、许可类型、关键文件
-3. 如果新技能不属于现有五大分类，增加新的分类
-4. 确保分类总览表也同步更新
-5. 底部的"快速导航"部分根据新技能的功能决定是否补充入口
-
-### 技能文件规范
-
-- 每个技能以文件夹形式存放在 `skills/` 下
-- 必须包含 `SKILL.md`，带 YAML frontmatter（`name`、`description`）
-- `template/SKILL.md` 可作为新技能的起点
-- 许可文件（如有）统一命名为 `LICENSE.txt`
-
-### 插件注册
-
-新技能如需在市场中可见，需在 `.claude-plugin/marketplace.json` 中注册，添加到对应 plugin 的 `skills` 数组下，或创建新的 plugin 对象。
+来源和再分发限制记录在 `THIRD_PARTY_NOTICES.md`。修改第三方 Skill 时保留其许可证和署名，不要用根许可证覆盖 Skill 自带许可证。
