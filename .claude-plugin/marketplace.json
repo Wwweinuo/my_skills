@@ -30,6 +30,7 @@
         "./skills/slack-gif-creator",
         "./skills/teach",
         "./skills/theme-factory",
+        "./skills/visual-learning-docs",
         "./skills/web-artifacts-builder",
         "./skills/webapp-testing",
         "./skills/xlsx"

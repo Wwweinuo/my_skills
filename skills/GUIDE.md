@@ -12,7 +12,7 @@
 | 创意与设计 | algorithmic-art, canvas-design, frontend-design, theme-factory, slack-gif-creator, brand-guidelines | 视觉设计、生成艺术、主题风格 |
 | 开发与 API | claude-api, mcp-builder, web-artifacts-builder, webapp-testing, karpathy-guidelines | Claude API 开发、MCP 服务构建、Web 测试、编码规范 |
 | 内容与协作 | doc-coauthoring, humanizer, internal-comms, teach | 文档协作、自然化改写、内部通讯、技能教学 |
-| 学习与效率 | feynman-technique | 费曼学习法、概念理解 |
+| 学习与效率 | feynman-technique, visual-learning-docs | 费曼学习法、概念理解、视觉优先的快速学习文档 |
 | 技能开发工具 | skill-creator | 创建、优化和评测 Skill |
 
 ---
@@ -165,6 +165,12 @@
 - **适用场景**: 技术概念解释、知识梳理、复杂主题入门
 - **许可**: Apache 2.0
 
+### [visual-learning-docs](./visual-learning-docs)
+- **描述**: 创建面向快速学习的视觉优先 Markdown 文档
+- **功能**: 使用 Mermaid 图解释概念、流程、关系和状态，配合最小示例、误区、总结与自测
+- **适用场景**: 技术主题入门、知识梳理、“一图看懂”和简明教程
+- **许可**: Apache 2.0
+
 ---
 
 ## 许可说明
@@ -194,4 +200,5 @@ Skill 目录内存在 `LICENSE.txt` 时，以该文件为准；否则适用仓�
 - **想让文本更自然？** → [humanizer](./humanizer)
 - **想多会话学习新技能？** → [teach](./teach)
 - **想深入理解概念？** → [feynman-technique](./feynman-technique)
+- **想用图快速学习技术主题？** → [visual-learning-docs](./visual-learning-docs)
 - **想生成艺术/GIF？** → [algorithmic-art](./algorithmic-art) + [canvas-design](./canvas-design) + [slack-gif-creator](./slack-gif-creator)
